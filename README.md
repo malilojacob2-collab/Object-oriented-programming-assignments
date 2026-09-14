@@ -1,1 +1,24 @@
 # Object-oriented-programming-assignments
+class Library {
+    protected String libraryName = "UICT Library";
+    public void displayInfo(){
+        System.out.println("Welcome to" + libraryName);
+    }
+}
+class Book extends Library {
+    private final String title;
+    public Book(String title){
+        this.title = title;
+    }
+    public void borrow(){
+        System.out.println("You have successfully borrowed the book:" + title);
+
+    }
+}
+public class Main {
+    public static void main (String[]args){
+        Book myBook = new Book("1987 by George Williams");
+        myBook.displayInfo();
+        myBook.borrow();
+    }
+}
